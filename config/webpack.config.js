@@ -14,14 +14,14 @@ module.exports = async (env, options) => {
                 directory: path.join(__dirname, "..", "dist"),
             },
         },
-        entry: ["./src/index.ts"],
+        entry: ["./src/index.tsx"],
         output: {
             // Add contenthash to cache bust on CDN
             filename: isDevelopment ? "bundle.js" : "bundle-[contenthash].js",
             path: path.resolve(__dirname, "..", "dist"),
         },
         resolve: {
-            extensions: [".ts", ".json", ".js"],
+            extensions: [".ts", ".json", ".js", ".tsx"],
         },
         module: {
             rules: [
@@ -34,7 +34,7 @@ module.exports = async (env, options) => {
                     use: "assets/resource",
                 },
                 {
-                    test: /\.ts$/,
+                    test: /\.(ts|tsx)$/,
                     loader: "ts-loader",
                 },
             ],
