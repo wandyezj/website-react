@@ -1,11 +1,10 @@
-import { website, clock } from "./website";
+import { website } from "./website";
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import { App } from "./components/App";
 
-clock();
 console.log(website());
 
-
-const container = document.getElementById('react-root')!
+const container = document.getElementById('react-app')!
 const root = createRoot(container)
-root.render(<h1>Hello React!</h1>)
+root.render(<App />)
