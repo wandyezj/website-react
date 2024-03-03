@@ -1,5 +1,5 @@
-import React from 'react';
-import { Clock } from './Clock';
+import React from "react";
+import { Clock } from "./Clock";
 
 /**
  * The top level application component.
@@ -7,7 +7,7 @@ import { Clock } from './Clock';
 export function App() {
     return (
         <div id="insert">
-        <Clock />
+            <Clock />
         </div>
     );
 }
