@@ -52,6 +52,16 @@
                 "leadingUnderscore": "forbid",
                 "trailingUnderscore": "forbid"
             },
+            // Allow import of React
+            {
+                "selector": "import",
+                "format": ["camelCase", "PascalCase"]
+            },
+            {
+                "selector": "function",
+                "modifiers": ["exported"],
+                "format": ["strictCamelCase", "StrictPascalCase"]
+            },
             {
                 "selector": ["variable"],
                 "modifiers": ["const"],

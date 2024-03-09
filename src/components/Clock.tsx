@@ -13,6 +13,7 @@ export function Clock() {
     return (
         <div>
             <h2>{ticks}</h2>
+            <h2>{count}</h2>
         </div>
     );
 }
